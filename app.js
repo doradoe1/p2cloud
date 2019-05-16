@@ -12,10 +12,5 @@ app.listen(port, hostname, () => {
 app.use(express.static('C:/revature/revature-p2/'));
 
 app.get('/', (req,res) =>{
-  res.sendFile(path.join(__dirname + `/index.html`))
+  res.sendFile(`C:/revature/revature-p2/`)
 });
-
-// execute a single shell command
-//shell.exec('npm test --coverage', function(err){
- //   console.log('executed test');
-//});
