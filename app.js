@@ -9,10 +9,10 @@ app.listen(port, hostname, () => {
   console.log(`Server OUR Chicken up and running at localhost:8080`);
 });
 
-app.use(express.static('C:/revature/revature-p2/FrontEnd/'));
+app.use(express.static('C:/revature/revature-p2/'));
 
 app.get('/', (req,res) =>{
-  res.sendFile(path.join(__dirname + `/FrontEnd/index.html`))
+  res.sendFile(path.join(__dirname + `/index.html`))
 });
 
 // execute a single shell command
