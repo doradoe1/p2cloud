@@ -4,8 +4,8 @@
   "description": "P2 revature",
   "main": "app.js",
   "scripts": {
-    "start": "node /js/app.js",
-    "dev": "nodemon /js/app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
