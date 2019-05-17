@@ -9,31 +9,41 @@
     <title>Login or Register for OUR Chicken Cloud</title>
 </head>
 
-<body style="background: blue">
+<body>
+
     <div class="login">
+
         <div class="form">
-            <form class="registration">
+
+            <form class="registration" action="/app.html">
                 <input type="text" placeholder="username" value="username" />
                 <input type="password" placeholder="password" value="password" />
                 <input type="text" placeholder="email" value="email" />
-                <button onclick="create(form)">Create</button>
+                <button type="submit">Create</button>
                 <p class="message">Already a member? <a href="#"> Login</a></p>
             </form>
-            <form class="login-form">
+
+            <form class="login-form" action="/app.html">
                 <input type="text" placeholder="username" value="username" />
                 <input type="password" placeholder="password" value="password" />
-                <button onclick="login(form)">Log In</button>
+                <button type="submit">Log In</button>
                 <p class="message">Not a member? <a href="#"> Sign Up</a></p>
             </form>
+
         </div>
+
     </div>
+
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+
     <script>
         $('.message a').click(function () {
             $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
         });
     </script>
-    <script src="verification.js"> </script>
+
     <script src="app.js"></script>
+
 </body>
+
 </html>
