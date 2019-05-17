@@ -7,6 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OUR Chicken Cloud</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 
 <body style="background:blueviolet">
@@ -21,52 +46,47 @@
                 <form action="" method="GET">
                     Create a Virtual Machine
                     <div class="createvm">
-                        <div class="btn grey">
-                            <span>Create VM</span>
-                        </div>
+                        <span class="collapsible">Create VM</span>
+                        <p class="content">Data for script </p>
                     </div>
                     </from>
                     <form action="" method="GET">
-                        Create a SQL database
-                        <div class="createdb">
-                            <div class="btn grey">
-                                <span>Create database</span>
-                            </div>
+                        Create a Directory
+                        <div class="createdir">
+                            <span class="collapsible">Create directory</span>
+                            <p class="content">Data for script </p>
                         </div>
                         </from>
                         <form action="" method="GET">
-                            Create a Directory
-                            <div class="createdir">
-                                <div class="btn grey">
-                                    <span>Create directory</span>
-                                </div>
+                            Create a Web App
+                            <div class="createwebapp">
+                                <span class="collapsible">Create Webapp</span>
+                                <p class="content">Data for script </p>
                             </div>
                             </from>
                             <form action="" method="GET">
-                                Create a Web App
-                                <div class="createwebapp">
-                                    <div class="btn grey">
-                                        <span>Create Webapp</span>
-                                    </div>
+                                Create Blob Storage
+                                <div class="createstorage">
+                                    <span class="collapsible">Create Storage</span>
+                                    <p class="content">Data for script </p>
                                 </div>
                                 </from>
                                 <form action="" method="GET">
-                                    Create Blob Storage
-                                    <div class="createstorage">
-                                        <div class="btn grey">
-                                            <span>Create Storage</span>
-                                        </div>
+                                    Create a SQL database
+                                    <div class="createdb">
+                                        <span class="collapsible">Create MySQL-DB</span>
+                                        <p class="content">Data for script </p>
+                                        <span class="collapsible">Create Cosmos-DB</span>
+                                        <p class="content">Data for script </p>
                                     </div>
                                     </from>
                                     <form action="" method="GET">
                                         Create a Network
                                         <div class="createnetwork">
-                                            <div class="btn grey">
-                                                <span>Create Private Network</span>
-                                            </div>
-                                            <div class="btn grey">
-                                                <span>Create Public Network</span>
-                                            </div>
+                                            <span class="collapsible">Create Private Network</span>
+                                            <p class="content">Data for script </p>
+                                            <span class="collapsible">Create Public Network</span>
+                                            <p class="content">Data for script </p>
                                         </div>
                                     </form>
             </h1>
@@ -74,6 +94,20 @@
         <h0>________________________________________________________________________________________________________________________________________________________________________
         </h0>
         <script src="/app.js"></script>
+        <script>var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }</script>
 </body>
 <br></br>
 <center>
