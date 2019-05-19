@@ -2,10 +2,10 @@
   "name": "p2",
   "version": "1.0.0",
   "description": "P2 revature",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "npm install & node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "dependencies": {
     "azure": "^2.3.1-preview",
     "express": "^4.16.4",
+    "html": "^1.0.0",
     "nodemon": "^1.19.0"
   }
 }
