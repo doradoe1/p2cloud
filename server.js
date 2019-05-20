@@ -6,7 +6,7 @@ const path = require('path')
 app.use(express.static(__dirname));
 
 app.listen(port, () => {
-  console.log(`Server running at ${port}/`);
+  console.log(`Server Our Chicken up and running at local:8080`);
 });
 
 app.get('/', (req,res) =>{
