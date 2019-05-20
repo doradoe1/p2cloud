@@ -369,13 +369,31 @@
             }
             document.getElementById("createPublicnetwork").value = "You Want a Public Network with: " + txt;
         }
+        // Sign Out Button
+            var msalConfig = {//4695b616-04cf-4063-a769-ab51fd8a88fd tenant ID
+            token: 'H7:3kRY0+.=y5v3]iRBNq1l_qar[43Zc',
+    auth: {
+        clientId: "8d935332-418d-4811-a99a-298cd54381bf", //le chicken ID
+        authority: "https://login.microsoftonline.com/4695b616-04cf-4063-a769-ab51fd8a88fd",
+        },
+    cache: {
+        cacheLocation: "sessionStorage",
+        storeAuthStateInCookie: true
+        }
+        };
+        var myMSALObj = new Msal.UserAgentApplication(msalConfig);
+        function signOut() {
+            myMSALObj.logout();
+            }
+        var loginbutton = document.getElementById('SignOut');
+        loginbutton.setAttribute('onclick', 'signOut();');
     </script>
 </body>
 <br></br>
 <center>
     <footer>
         <form class="Log Out" action="https://paastrial.azurewebsites.net/">
-            <button type="submit" style="font-size: 20px">Log Out</button>
+            <button type="submit" style="font-size: 20px" id="SignOut>Log Out</button>
         </form>
     </footer>
 </center>
